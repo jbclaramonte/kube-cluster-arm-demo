@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: todomvc
+    visualize: "true"
+  name: todomvc
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: NodePort
+  selector:
+    app: todomvc
