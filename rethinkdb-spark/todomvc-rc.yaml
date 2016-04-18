@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: todomvc
+spec:
+  replicas: 1
+  selector:
+    app: todomvc
+  template:
+    metadata:
+      labels:
+        app: todomvc
+        visualize: "true"
+    spec:
+      containers:
+      - name: todomvc
+        image: jbclaramonte/todomvc-spark-rethinkdb:arm

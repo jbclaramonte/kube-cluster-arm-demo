@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rethinkdb
+spec:
+  replicas: 1
+  selector:
+    db: rethinkdb
+  template:
+    metadata:
+      labels:
+        db: rethinkdb
+        visualize: "true"
+    spec:
+      containers:
+      - name: rethinkdb
+        image: modul8com/rethinkdb-armv7-rpi2
