@@ -9,6 +9,7 @@ spec:
   ports:
     - port: 4567
       targetPort: 4567
+      nodePort: 32000
   selector:
     app: todomvc
   type: NodePort

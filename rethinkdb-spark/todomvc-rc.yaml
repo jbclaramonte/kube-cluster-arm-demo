@@ -15,3 +15,9 @@ spec:
       containers:
       - name: todomvc
         image: jbclaramonte/todomvc-spark-rethinkdb:arm
+        readinessProbe:
+          httpGet:
+            path: /api/todos
+            port: 4567
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
