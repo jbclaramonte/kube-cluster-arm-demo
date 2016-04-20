@@ -19,5 +19,5 @@ spec:
           httpGet:
             path: /api/todos
             port: 4567
-          initialDelaySeconds: 5
+          initialDelaySeconds: 10
           timeoutSeconds: 1
